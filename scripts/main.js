@@ -69,7 +69,7 @@ trainee: {
   image: ...
   selected: false/true // whether user selected them
   eliminated: false/true
-  top12: false/true
+  top7: false/true
 }
 */
 function convertCSVArrayToTraineeData(csvArrays) {
@@ -83,7 +83,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     //trainee.grade = traineeArray[4]; no grades for pd camp 2020
     trainee.birthyear = traineeArray[3]; // 3 is now year
     trainee.eliminated = traineeArray[4] === 'e'; // sets trainee to be eliminated if 'e' appears in 5th col
-    trainee.top12 = traineeArray[4] === 't'; // sets trainee to top 12 if 't' appears in 5th column
+    trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 5th column
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
@@ -107,7 +107,7 @@ function newTrainee() {
 // Constructor for a blank ranking list
 function newRanking() {
   // holds the ordered list of rankings that the user selects
-  let ranking = new Array(12);
+  let ranking = new Array(7);
   for (let i = 0; i < ranking.length; i++) {
     ranking[i] = newTrainee();
   }
@@ -173,14 +173,14 @@ function populateTable(trainees) {
 function populateTableEntry(trainee) {
   // eliminated will have value "eliminated" only if trainee is eliminated and showEliminated is true, otherwise this is ""
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let top7 = (showTop7 && trainee.top7) && "top7";
   const tableEntry = `
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
       <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
       ${
-        top12 ? '<div class="table__entry-icon-crown"></div>' : ''
+        top7 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
       ${
         trainee.selected ? '<img class="table__entry-check" src="assets/check.png"/>' : ""
@@ -247,7 +247,7 @@ function populateRankingEntry(trainee, currRank) {
     modifiedCompany = abbreviatedCompanies[modifiedCompany];
   }
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let top7 = (showTop7 && trainee.top7) && "top7";
   const rankingEntry = `
   <div class="ranking__entry ${eliminated}">
     <div class="ranking__entry-view">
@@ -257,7 +257,7 @@ function populateRankingEntry(trainee, currRank) {
       </div>
       <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
       ${
-        top12 ? '<div class="ranking__entry-icon-crown"></div>' : ''
+        top7 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
     </div>
     <div class="ranking__row-text">
