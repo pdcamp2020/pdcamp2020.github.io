@@ -86,7 +86,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 5th column
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
-      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
+      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpeg";
     return trainee;
   });
   filteredTrainees = trainees;
@@ -315,28 +315,11 @@ function swapTrainees(index1, index2) {
 // <original> is the original name as appearing on csv
 // all of it should be lower case
 const alternateRomanizations = {
-  'heo yunjin': ['heo yoonjin', 'huh yoonjin', 'huh yunjin'],
-  'go yujin': ['ko yoojin', 'ko yujin', 'go yoojin'],
-  'kim yubin': ['kim yoobin'],
-  'lee yoojun': ['lee yujeong'],
-  'shin suhyun': ['shin soohyun', 'shin soohyeon', 'shin suhyeon'],
-  'jo ahyoung': ['cho ahyoung', 'cho ahyeong'],
-  'yu minyoung': ['yoo minyeong', 'yu minyeong', 'yoo minyoung'],
-  'park haeyoon': ['park haeyun'],
-  'park jinhee': ['jinny park'],
-  'jo sarang': ['cho sarang'],
-  'park chanju': ['park chanjoo'],
-  'lee gaeun': ['lee kaeun'],
-  'na goeun': ['na koeun'],
-  'ahn yujin': ['ahn yoojin'],
-  'jo gahyun': ['cho gahyun', 'jo kahyun', 'cho kahyun', 'jo kahyeon', 'cho kahyeon'],
-  'jo yuri': ['cho yuri'],
-  'yoon haesol': ['yun haesol'],
-  'kim minju': ['kim minjoo'],
-  'lee seunghyun': ['lee seunghyeon'],
-  'jo yeongin': ['cho yeongin', 'cho youngin', 'jo youngin'],
-  'kim suyun': ['kim sooyoon'],
-  'kim sihyun': ['kim shihyun', 'kim sihyeon']
+  'liu xiening': ['sally'],
+  'zheng naixin': ['nene'],
+  'zhu zhuai': ['joyce chu'],
+  'zhin': ['ko yoojin', 'ko yujin', 'go yoojin']
+
 };
 
 // uses the current filter text to create a subset of trainees with matching info
