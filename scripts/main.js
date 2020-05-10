@@ -85,6 +85,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.eliminated = traineeArray[4] === 'e'; // sets trainee to be eliminated if 'e' appears in 5th col
     trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 5th column
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
+    trainee.grade='a'; //all girls get color border a
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpeg";
     return trainee;
@@ -99,7 +100,6 @@ function newTrainee() {
     id: -1, // -1 denotes a blank trainee spot
     name_romanized: '&#8203;', // this is a blank character
     company: '&#8203;', // this is a blank character
-    grade: 'no',
     image: 'emptyrank.png',
   };
 }
@@ -368,7 +368,7 @@ function removeRankedTrainee(trainee) {
   return false;
 }
 
-const currentURL = "https://produce48.github.io/";
+const currentURL = "https://pdcamp2020.github.io/";
 // Serializes the ranking into a string and appends that to the current URL
 function generateShareLink() {
   let shareCode = ranking.map(function (trainee) {
@@ -400,7 +400,7 @@ var trainees = [];
 var filteredTrainees = [];
 // holds the ordered list of rankings that the user selects
 var ranking = newRanking();
-const rowNums = [1, 2, 4, 5];
+const rowNums = [1, 2, 4];
 //window.addEventListener("load", function () {
   populateRanking();
   readFromCSV("./trainee_info.csv");
