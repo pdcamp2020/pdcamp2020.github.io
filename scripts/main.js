@@ -87,7 +87,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.grade="a"; //all girls get color border a
     trainee.image =
-      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
+      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpeg";
     return trainee;
   });
   filteredTrainees = trainees;
