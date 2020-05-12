@@ -23,7 +23,7 @@
 <body>
   <div id="top-banner">
     <img id="banner-image" src="assets/logo_white.png"/>
-    <p id="banner-title">PRODUCE CAMP 2020</p>
+    <p id="banner-title">PRODUCE CAMP 2020 RANKER</p>
     <p id="banner-subtitle">Make your own top 7!</p>
   </div>
   <div class="flex-container padded-box">
@@ -36,22 +36,18 @@
           <input id="table__filter-input" oninput="filterTrainees(event)" type="text" placeholder="Search"/>
         </div>
         <div id="table__entry-container">
-          <!--
-           <div class="table__entry">
+          <!-- <div class="table__entry">
             <div class="table__entry-icon">
-              <img class="table__entry-img" src="assets/trainees/ChenKe.jpg" />
+              <img class="table__entry-img" src="assets/trainees/LeeGaeun.jpg" />
               <div class="table__entry-icon-border a-rank-border"></div>
               <img class="table__entry-check" src="assets/check.png"/>
             </div>
             <div class="table__entry-text">
-              <strong><span class="name">Chen Ke </span></strong>
-              <span class="hangul">(Chen Ke)</span>
-              <span class="company">Who knows</span>
+              <strong><span class="name">Lee Gaeun</span></strong>
+              <span class="hangul">(이가은)</span>
+              <span class="company">PLEDIS ENTERTAINMENT</span>
             </div>
-          </div>
-
--->
-
+          </div> -->
         </div>
       </div>
       <div id="filters-container">
@@ -61,8 +57,8 @@
           <label class="checkbox-label" for="show-eliminated">Show Eliminated (At Bottom)</label>
         </div>
         <div>
-          <input type="checkbox" name="show-top7" id="show-top7" onclick="showTop7Click(event)"/>
-          <label class="checkbox-label" for="show-top7">Show Current Top 7</label>
+          <input type="checkbox" name="show-top12" id="show-top12" onclick="showTop12Click(event)"/>
+          <label class="checkbox-label" for="show-top12">Show Current Top 12</label>
         </div>
       </div>
       <div id="sharelink-container">
@@ -89,6 +85,7 @@
           </div>
         </div> -->
       </div>
+      <div class="ranking__row"></div>
       <div class="ranking__row"></div>
       <div class="ranking__row"></div>
     </div>
