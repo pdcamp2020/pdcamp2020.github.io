@@ -85,7 +85,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.eliminated = traineeArray[4] === 'e'; // sets trainee to be eliminated if 'e' appears in 5th col
     trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 5th column
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
-    trainee.grade="A"; //all girls get color border a
+    trainee.grade="a"; //all girls get color border a
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
     return trainee;
@@ -178,7 +178,7 @@ function populateTableEntry(trainee) {
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
-      <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
+      <div class="table__entry-icon-border ${trainee.grade}-rank-border"></div>
       ${
         top7 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
@@ -253,9 +253,9 @@ function populateRankingEntry(trainee, currRank) {
     <div class="ranking__entry-view">
       <div class="ranking__entry-icon">
         <img class="ranking__entry-img" src="assets/trainees/${trainee.image}" />
-        <div class="ranking__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border" data-rankid="${currRank-1}"></div>
+        <div class="ranking__entry-icon-border ${trainee.grade}-rank-border" data-rankid="${currRank-1}"></div>
       </div>
-      <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
+      <div class="ranking__entry-icon-badge bg-${trainee.grade}">${currRank}</div>
       ${
         top7 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
