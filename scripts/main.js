@@ -85,9 +85,9 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.eliminated = traineeArray[4] === 'e'; // sets trainee to be eliminated if 'e' appears in 5th col
     trainee.top7 = traineeArray[4] === 't'; // sets trainee to top 7 if 't' appears in 5th column
     trainee.id = parseInt(traineeArray[5]) - 1; // trainee id is the original ordering of the trainees in the first csv
-    trainee.grade="a"; //all girls get color border a
+    trainee.grade="A"; //all girls get color border a
     trainee.image =
-      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpeg";
+      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpg";
     return trainee;
   });
   filteredTrainees = trainees;
