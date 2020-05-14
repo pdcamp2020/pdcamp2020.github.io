@@ -88,7 +88,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     //all girls get color border a
     if (traineeArray[4]=='t') {
       trainee.grade="a";
-      else if (traineeArray[4]=="ne") {
+    }else if (traineeArray[4]=="ne") {
         trainee.grade="c";
         //ne  stands for not eliminated
       }else{
