@@ -318,7 +318,7 @@ const alternateRomanizations = {
   'liu xiening': ['sally'],
   'zheng naixin': ['nene'],
   'zhu zhuai': ['joyce chu'],
-  'zhin': ['ko yoojin', 'ko yujin', 'go yoojin']
+  'example': ['ko yoojin', 'ko yujin', 'go yoojin']
 
 };
 
