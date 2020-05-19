@@ -302,7 +302,7 @@ body {
   position: relative;
 }
 .ranking__entry-img {
-  border-radius: 50%;
+  border-radius: 48%;
   width: inherit;
   height: inherit;
 }
@@ -318,6 +318,7 @@ body {
   height: inherit;
   border-radius: 50%;
   box-sizing: border-box;
+  z-index: -1;
 }
 .ranking__entry-icon-badge {
   position: absolute;
