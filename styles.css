@@ -302,7 +302,7 @@ body {
   position: relative;
 }
 .ranking__entry-img {
-  border-radius: 48%;
+  border-radius: 50%;
   width: inherit;
   height: inherit;
 }
@@ -312,7 +312,7 @@ body {
 }
 .ranking__entry-icon-border {
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 0;
   width: inherit;
   height: inherit;
