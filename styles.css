@@ -25,6 +25,10 @@
 p {
   margin: 0;
 }
+footer {
+    text-align: center;
+    font-size: 12px;
+}
 
 body {
   margin: 0;
