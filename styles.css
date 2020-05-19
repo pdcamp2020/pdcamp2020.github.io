@@ -14,7 +14,7 @@
   --checked-blue: #052ae2CC;
 
   /* ranking border colors */
-  --a-rank: #fb4a8c;
+  --a-rank: #f87caf;
   --b-rank: #fc840c;
   --c-rank: #ffc407;
   --d-rank: #19b468;
@@ -292,6 +292,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 10px;
 }
 .ranking__entry-view {
   position: relative;
