@@ -98,7 +98,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     //green is still in the show
     //gray is eliminated
     trainee.image =
-      trainee.name_romanized.replace(" ", "").replace("-", "") + ".jpeg";
+      trainee.name_romanized.replace(" ", "").replace("-", "") + ".png";
     return trainee;
   });
   filteredTrainees = trainees;
